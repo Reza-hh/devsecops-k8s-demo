@@ -15,7 +15,7 @@ pipeline {
             steps {
               sh 'printenv'
               sh 'docker build -t siddharth67/numeric-app:""$Git_COMMT"" .' 
-              sh 'docker push siddharth67/numeric-app:""$GIT_COMMT""'
+              sh 'docker push siddharth67/numeric-app:""$GIT_COMMT""' 
             }
         }   
     }
