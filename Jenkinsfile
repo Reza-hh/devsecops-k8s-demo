@@ -13,8 +13,10 @@ pipeline {
   stages {
       stage('docker Build Push') {
             steps {
-              sh 'printenv' 
-              sh 'docker build -t siddharth/numeric-app""$GIT_COMMIT"" .'
+              withDockerRegistry([credentialId: "docker-hub", url:""]) {
+                  sh 'printenv' 
+                  sh 'docker build -t siddharth/numeric-app""$GIT_COMMIT"" .'
+                }
             }
         }   
     }
