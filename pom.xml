@@ -49,7 +49,7 @@
 		</plugins>
 	</build>
 
-			</project>
+</project>
 			<plagin>
 			  <groupId>org.qwasp</groupId>
 			  <artifactId>dependency-ceck-maven</artifactId/>
