@@ -15,7 +15,20 @@ pipeline {
                 
             }
         }
+    stage('Vulnerability Scan -Docker') {
+            steps {
+               
+               sh "mvn dependency-chek:chek"
+               
+            }
+            post{
+              always {
+                dependencyCheckPublisher pattern: 'target/dependency-check-report.xml'
+              }
+            }
+        }
 
+    
       stage('Kubernetes Deployment -Dev') {
             steps {
                withKubeConfig([credentialsId: 'kubeconfig']) {
