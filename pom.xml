@@ -50,12 +50,4 @@
 	</build>
 
 </project>
-			<plagin>
-			  <groupId>org.qwasp</groupId>
-			  <artifactId>dependency-ceck-maven</artifactId/>
-			  <version>6.1.6</version>
-			  <configuration>
-			    <format>ALL</format>
-			    <failBuildOnCVSS> 9</failBuildOnCVSS>
-			  </configuration>
-			</plagin>
+			
